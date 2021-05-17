@@ -21,18 +21,18 @@ function UserRow({ user }){
             <td>{location.state}</td>
             <td>{location.country}</td>
         </tr>
-            { showUserModal ? 
-                <div className="user-modal">
-                    <UserModal 
-                        picture={picture}
-                        email={email}
-                        cell={cell}
-                        phone={phone}
-                        name={name}
-                        closeModal={selectUser} 
-                    />
-                 </div> 
-            : null}
+        { showUserModal ? 
+            <div className="user-modal">
+                <UserModal 
+                    picture={picture}
+                    email={email}
+                    cell={cell}
+                    phone={phone}
+                    name={name}
+                    closeModal={selectUser} 
+                />
+            </div> 
+        : null}
         </>
     )
 }
