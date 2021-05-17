@@ -11,23 +11,23 @@ function App() {
   }, [])
 
   const userRow = users.map(user => {
-    return <UserRow key={user.id} user={user} />
+    return <UserRow key={user.name.first} user={user} />
   })
 
   return (
     <div className="users-table-div">
       <h1>User Data Table</h1>
       <table className="users-table">
-          <tbody>
-              <tr>
-                  <th className="standings-header">First Name</th>
-                  <th className="standings-header">Last Name</th>
-                  <th className="standings-header">Date of Birth</th>
-                  <th className="standings-header">State</th> 
-                  <th className="standings-header">Country</th>   
-              </tr>
-              {userRow}
-          </tbody>
+          <thead>
+            <tr>
+              <th className="standings-header">First Name</th>
+              <th className="standings-header">Last Name</th>
+              <th className="standings-header">Date of Birth</th>
+              <th className="standings-header">State</th> 
+              <th className="standings-header">Country</th>   
+            </tr>
+          </thead>
+          {userRow}
       </table>
     </div>
   );

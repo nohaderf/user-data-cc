@@ -6,21 +6,21 @@ function UserRow({ user }){
     const dateOfBirth = dob.date.substring(0,10)
     const [showUserModal, setShowUserModal] = useState(false)
 
-    console.log(user)
-
     function selectUser(){
         setShowUserModal(!showUserModal)
       }    
 
     return(
         <>
-        <tr className="user-info" onClick={selectUser}>
-            <td>{name.first}</td>
-            <td>{name.last}</td>
-            <td>{dateOfBirth}</td>
-            <td>{location.state}</td>
-            <td>{location.country}</td>
-        </tr>
+        <tbody>
+            <tr className="user-info" onClick={selectUser}>
+                <td>{name.first}</td>
+                <td>{name.last}</td>
+                <td>{dateOfBirth}</td>
+                <td>{location.state}</td>
+                <td>{location.country}</td>
+            </tr>    
+        </tbody>
         { showUserModal ? 
             <div className="user-modal">
                 <UserModal 
@@ -31,8 +31,8 @@ function UserRow({ user }){
                     name={name}
                     closeModal={selectUser} 
                 />
-            </div> 
-        : null}
+            </div>         
+        : null}        
         </>
     )
 }
