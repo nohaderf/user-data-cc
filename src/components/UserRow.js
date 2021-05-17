@@ -33,10 +33,6 @@ function UserRow({ user }){
                     />
                  </div> 
             : null}
-            {/* <img src={picture.thumbnail}></img>
-            {email}
-            {cell}
-            {phone} */}
         </>
     )
 }
